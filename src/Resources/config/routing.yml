@@ -1,0 +1,9 @@
+frontend_ttn:
+  path: /_ttn/{token}
+  defaults:
+    _controller: ContaoTtnBundle:MessageController:index
+    _scope: frontend
+    _token_check: false
+  requirements:
+    token: '\w+'
+  methods: [POST]
