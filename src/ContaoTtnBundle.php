@@ -8,7 +8,7 @@
  * @license LGPL-3.0-or-later
  */
 
-namespace Contao\SkeletonBundle;
+namespace Mindbird\Contao\TheThingsNetwork;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
