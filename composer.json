@@ -1,7 +1,7 @@
 {
     "name": "mindbird/contao-ttn",
     "type": "contao-bundle",
-    "description": "",
+    "description": "Use Contao as a The Things Network http ingegration.",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
