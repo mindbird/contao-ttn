@@ -27,13 +27,9 @@ class MessageController extends Controller
             return new Response('Can not find application', 404);
         }
 
-
-
-        // Save data to message table
-
         $messageJson = json_decode($request->getContent());
 
-        $device = DeviceModel::findBy('name', $messageJson['dev_id']);
+        $device = DeviceModel::findBy('name', $messageJson->dev_id);
         if ($device === null) {
             return new Response('Can not find device', 404);
         }

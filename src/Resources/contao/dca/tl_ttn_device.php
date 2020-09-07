@@ -75,20 +75,20 @@ $GLOBALS['TL_DCA']['tl_ttn_device'] = [
             ],
             'sql' => "varchar(255) NOT NULL default ''"
         ],
-        'applicationId' => array(
+        'applicationId' => [
             'exclude' => true,
             'inputType' => 'select',
             'filter' => true,
             'foreignKey' => 'tl_ttn_application.name',
-            'eval' => array(
+            'eval' => [
                 'tl_class' => 'w50',
                 'mandatory' => true
-            ),
+            ],
             'sql' => "int(10) unsigned NOT NULL default '0'",
-            'relation' => array(
+            'relation' => [
                 'type' => 'hasOne',
                 'load' => 'eagerly'
-            )
-        ),
+            ]
+        ],
     ]
 ];
