@@ -16,7 +16,7 @@ $GLOBALS['TL_DCA']['tl_ttn_device'] = [
             'mode' => 1,
             'flag' => 1,
             'fields' => [
-                'deviceId'
+                'name'
             ],
             'panelLayout' => 'sort,filter,search,limit'
         ],
@@ -54,7 +54,7 @@ $GLOBALS['TL_DCA']['tl_ttn_device'] = [
         ]
     ],
     'palettes' => [
-        'default' => '{device_legend},applicationId,deviceId;'
+        'default' => '{device_legend},applicationId,name;'
     ],
     'fields' => [
         'id' => [
