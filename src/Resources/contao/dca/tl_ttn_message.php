@@ -55,7 +55,7 @@ $GLOBALS['TL_DCA']['tl_ttn_message'] = [
         ]
     ],
     'palettes' => [
-        'default' => '{message_legend},deviceId,message;'
+        'default' => '{message_legend},pid,message;'
     ],
     'fields' => [
         'id' => [
@@ -64,7 +64,7 @@ $GLOBALS['TL_DCA']['tl_ttn_message'] = [
         'tstamp' => [
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ],
-        'deviceId' => [
+        'pid' => [
             'exclude' => true,
             'inputType' => 'select',
             'filter' => true,
