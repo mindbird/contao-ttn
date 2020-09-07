@@ -4,6 +4,7 @@ $GLOBALS['TL_DCA']['tl_ttn_application'] = [
     'config' => [
         'dataContainer' => 'Table',
         'switchToEdit' => true,
+        'ctable' => ['tl_ttn_device'],
         'enableVersioning' => true,
         'sql' => [
             'keys' => [

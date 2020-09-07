@@ -8,7 +8,8 @@ $GLOBALS ['BE_MOD'] ['contao-ttn'] ['application'] = [
 
 $GLOBALS ['BE_MOD'] ['contao-ttn'] ['device'] = [
     'tables' => [
-        'tl_ttn_devices'
+        'tl_ttn_device',
+        'tl_ttn_message',
     ]
 ];
 
