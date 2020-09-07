@@ -55,7 +55,7 @@ $GLOBALS['TL_DCA']['tl_ttn_device'] = [
         ]
     ],
     'palettes' => [
-        'default' => '{device_legend},applicationId,name;'
+        'default' => '{device_legend},pid,name;'
     ],
     'fields' => [
         'id' => [
@@ -75,7 +75,7 @@ $GLOBALS['TL_DCA']['tl_ttn_device'] = [
             ],
             'sql' => "varchar(255) NOT NULL default ''"
         ],
-        'applicationId' => [
+        'pid' => [
             'exclude' => true,
             'inputType' => 'select',
             'filter' => true,
