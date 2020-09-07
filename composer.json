@@ -11,6 +11,7 @@
     ],
     "require": {
         "php": "^7.0",
+        "ext-json": "*",
         "contao/core-bundle": "^4.4",
         "mindbird/ttn-php": "^1.0"
     },

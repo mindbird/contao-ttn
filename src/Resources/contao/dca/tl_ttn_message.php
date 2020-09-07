@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_ttn_application'] = [
+$GLOBALS['TL_DCA']['tl_ttn_message'] = [
     'config' => [
         'dataContainer' => 'Table',
         'switchToEdit' => true,
@@ -16,13 +16,13 @@ $GLOBALS['TL_DCA']['tl_ttn_application'] = [
             'mode' => 1,
             'flag' => 1,
             'fields' => [
-                'name'
+                'deviceId'
             ],
             'panelLayout' => 'sort,filter,search,limit'
         ],
         'label' => [
             'fields' => [
-                'name'
+                'deviceId'
             ],
             'format' => '%s'
         ],
@@ -36,17 +36,17 @@ $GLOBALS['TL_DCA']['tl_ttn_application'] = [
         ],
         'operations' => [
             'edit' => [
-                'label' => &$GLOBALS['TL_LANG']['tl_company']['edit'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ttn_message']['edit'],
                 'href' => 'act=edit',
                 'icon' => 'edit.gif'
             ],
             'copy' => [
-                'label' => &$GLOBALS['TL_LANG']['tl_company']['copy'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ttn_message']['copy'],
                 'href' => 'act=copy',
                 'icon' => 'copy.gif'
             ],
             'delete' => [
-                'label' => &$GLOBALS['TL_LANG']['tl_company']['delete'],
+                'label' => &$GLOBALS['TL_LANG']['tl_ttn_message']['delete'],
                 'href' => 'act=delete',
                 'icon' => 'delete.gif',
                 'attributes' => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
@@ -54,7 +54,7 @@ $GLOBALS['TL_DCA']['tl_ttn_application'] = [
         ]
     ],
     'palettes' => [
-        'default' => '{application_legend},name,token;'
+        'default' => '{message_legend},deviceId,message;'
     ],
     'fields' => [
         'id' => [
@@ -63,28 +63,28 @@ $GLOBALS['TL_DCA']['tl_ttn_application'] = [
         'tstamp' => [
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ],
-        'name' => [
+        'deviceId' => [
             'exclude' => true,
-            'search' => true,
-            'inputType' => 'text',
-            'eval' => [
-                'mandatory' => true,
+            'inputType' => 'select',
+            'filter' => true,
+            'foreignKey' => 'tl_ttn_device.name',
+            'eval' => array(
                 'tl_class' => 'w50',
-                'maxlength' => 255
-            ],
-            'sql' => "varchar(255) NOT NULL default ''"
+                'mandatory' => true
+            ),
+            'sql' => "int(10) unsigned NOT NULL default '0'",
+            'relation' => array(
+                'type' => 'hasOne',
+                'load' => 'eagerly'
+            )
         ],
-        'token' => [
-            'label' => &$GLOBALS['TL_LANG']['tl_ttn_application']['token'],
+        'message' => [
             'exclude' => true,
             'search' => true,
-            'inputType' => 'text',
+            'inputType' => 'textarea',
             'eval' => [
-                'mandatory' => true,
-                'tl_class' => 'w50',
-                'maxlength' => 255
             ],
-            'sql' => "varchar(255) NOT NULL default ''"
+            'sql' => "TEXT default ''"
         ],
     ]
 ];

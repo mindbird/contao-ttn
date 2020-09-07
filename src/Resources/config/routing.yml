@@ -1,7 +1,7 @@
 frontend_ttn:
   path: /_ttn/{token}
   defaults:
-    _controller: ContaoTtnBundle:MessageController:index
+    _controller: ContaoTtnBundle:Message:index
     _scope: frontend
     _token_check: false
   requirements:
