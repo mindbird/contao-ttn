@@ -8,6 +8,6 @@ use Contao\Model;
 
 class MessageModel extends Model
 {
-    protected static $strTable = 'tl_ttn_messages';
+    protected static $strTable = 'tl_ttn_message';
 
 }
