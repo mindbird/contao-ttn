@@ -37,7 +37,7 @@ class MessageController extends Controller
 
         $message = new MessageModel();
         $message->message = $request->getContent();
-        $message->device = $device->id;
+        $message->pid = $device->id;
         $message->save();
 
         return new Response();
